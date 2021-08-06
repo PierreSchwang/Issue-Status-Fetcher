@@ -46,7 +46,6 @@ func Run() {
 
 func Update(untilNext time.Duration) {
 	for true {
-		log.Println("Reloading status page data")
 		components, err := issue.Components(options.Url, options.GitHubPersonalAccessToken)
 		if err != nil {
 			log.Fatal("Failed to get all components ", err)
